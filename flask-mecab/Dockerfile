@@ -26,6 +26,7 @@ RUN ./bin/install-mecab-ipadic-neologd -n -y
 
 COPY . /opt/api
 WORKDIR /opt/api
+RUN pip3 install --upgrade pip3
 RUN pip3 install -r requirements.txt
 
 CMD ["python3", "server.py"]
